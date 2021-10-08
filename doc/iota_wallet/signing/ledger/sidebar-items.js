@@ -1,1 +1,0 @@
-initSidebarItems({"constant":[["HARDENED",""],["MAX_POOL_SIZE",""]],"struct":[["AddressIndexRecorder","A record matching an Input with its address."],["AddressPoolEntry",""],["LedgerNanoSigner",""]]});
