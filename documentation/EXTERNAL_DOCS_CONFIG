@@ -1,0 +1,9 @@
+[
+    "@docusaurus/plugin-content-docs",
+    {
+        id: "wallet-rs",
+        path: "external/wallet.rs/documentation/docs",
+        routeBasePath: "wallet.rs",
+        sidebarPath: require.resolve("./external/wallet.rs/documentation/sidebars.js"),
+    }
+],

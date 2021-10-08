@@ -1,0 +1,6 @@
+{
+  label: "Wallet",
+  to: "wallet.rs/welcome",
+  className: "icon-wallet",
+  activeBaseRegex: 'wallet.rs/.*'
+},
