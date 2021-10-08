@@ -2,9 +2,9 @@ name: deploy
 
 on:
   pull_request:
-    branches: [docs/removeDeployAction, dev, main ]
+    branches: [ dev, main ]
   push:
-    branches: [docs/removeDeployAction, dev, main ]
+    branches: [dev, main ]
 
 jobs:
   checks:
@@ -53,5 +53,5 @@ jobs:
         uses: iotaledger/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./documentation/build/rust
+          publish_dir: ./documentation/build/rust/doc/wallet
           cname: wallet-lib.docs.iota.org
