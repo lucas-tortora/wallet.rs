@@ -2,13 +2,13 @@ name: deploy
 
 on:
   pull_request:
-    branches: [dev, main ]
+    branches: [docs/removeDeployAction, dev, main ]
   push:
     branches: [docs/removeDeployAction, dev, main ]
 
 jobs:
   checks:
-    if: grm thub.event_name != 'push'
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
