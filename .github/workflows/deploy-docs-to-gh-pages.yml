@@ -45,7 +45,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install libudev-dev libusb-1.0-0-dev
-          DOCFLAGS="--cfg docsrs" cargo +nightly doc --all-features --document-private-items --no-deps --release --target-dir docs/libraries/rust/rust_docs
+          DOCFLAGS="--cfg docsrs" cargo +stable doc --all-features --document-private-items --no-deps --release
           mkdir -p ./documentation/build/rust
           cp -r target/doc  ./documentation/build/rust
 
