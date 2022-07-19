@@ -85,6 +85,11 @@ module.exports = {
               id: 'libraries/nodejs/examples',
               label: 'Examples'
             },
+            {
+              type: 'doc',
+              id: 'libraries/nodejs/exchange_guide',
+              label: 'Exchange Guide'
+            }
           ]
         }
       ]
