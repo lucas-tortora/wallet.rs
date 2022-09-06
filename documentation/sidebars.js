@@ -19,6 +19,33 @@ module.exports = {
       id: 'overview',
     },
     {
+      type: "category",
+      label: 'Getting Started',
+
+      link: {
+          type: "doc",
+          id:'getting_started/getting_started'
+
+      },
+      items: [
+          {
+              type: "doc",
+              id: "getting_started/nodejs",
+              label: 'Nodejs'
+          },
+          {
+              type: "doc",
+              id: "getting_started/python",
+              label: 'Python'
+          },
+          {
+              type: "doc",
+              id: "getting_started/rust",
+              label: 'Rust'
+          },
+      ]
+    },
+    {
       type: 'category',
       label: 'Libraries',
       collapsed: false,
@@ -27,15 +54,11 @@ module.exports = {
           id: 'libraries/overview',
           label: 'Overview',
         },
+
         {
           type: 'category',
           label: 'Rust',
           items: [
-            {
-              type: 'doc',
-              id: 'libraries/rust/getting_started',
-              label: 'Getting Started'
-            },
             {
               type: 'category',
               label: 'How To',
@@ -75,11 +98,6 @@ module.exports = {
           type: 'category',
           label: 'Node.js',
           items: [
-            {
-              type: 'doc',
-              id: 'libraries/nodejs/getting_started',
-              label: 'Getting Started'
-            },
             {
               type: "category",
               label: "How To",
@@ -142,11 +160,6 @@ module.exports = {
           type: 'category',
           label: 'Python',
           items: [
-            {
-              type: 'doc',
-              id: 'libraries/python/getting_started',
-              label: 'Getting Started'
-            },
             {
               type: "category",
               label: "How To",
