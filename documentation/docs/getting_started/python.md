@@ -11,7 +11,7 @@ keywords:
 ---
 import SafePasswordStorage from '../_admonitions/_warning_safe_password_storage.md'
 
-# Getting Started with IOTA Wallet Python Binding
+# Getting Started with Python 
 
 <SafePasswordStorage />
 
@@ -56,7 +56,10 @@ You can do so by running the following commands:
 python3 setup.py bdist_wheel
 ```
 
-#### (optional) Create a virtual environment and use it
+#### (optional) Create and use a virtual environment
+
+If you want to isolate the library from the rest of your system, you can create a virtual environment by running the
+following commands:
 
 ```bash
 python3 -m venv .venv

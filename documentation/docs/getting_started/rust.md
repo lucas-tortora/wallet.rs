@@ -24,28 +24,40 @@ version [rustup update stable](https://github.com/rust-lang/rustup.rs#keeping-ru
 
 ## Dependencies
 
-[_cmake_](https://cmake.org/documentation/) and [_openssl_](https://www.openssl.org/docs/) are required. You may need
-install additional build tools on your system to run the build process successfully using Cargo.
+The library uses [_cmake_](https://cmake.org/documentation/) and [_openssl_](https://www.openssl.org/docs/). You may
+need install additional build tools on your system to run the build process successfully using Cargo.
 
 ### Windows
 
 You can download _cmake_ from the [official cmake website](https://cmake.org/download/).
 You can install _openssl_ with [vcpkg](https://github.com/microsoft/vcpkg) or [chocolatey](https://chocolatey.org/).
 
-#### Install _openssl_ with _vcpkg_ 
+#### Install _openssl_ with _vcpkg_
+
+You can run the following command to install _openssl_ with _vcpkg_:
 
 ```shell
 ./vcpkg.exe install openssl:x64-windows
 ./vcpkg.exe integrate install
-# you may want to add this to the system environment variables since you'll need it to compile the crate
+```
+
+You may want to add this to the system environment variables since you'll need it to compile the crate:
+
+```shell
 set VCPKGRS_DYNAMIC=1
 ```
 
-#### Install _openssl_ with _chocolatey_ 
+#### Install _openssl_ with _chocolatey_
 
-```bash
+You can run the following command to install _openssl_ with _chocolatey_:
+
+```shell
 choco install openssl
-# you may need to set the OPENSSL_ROOT_DIR environment variable
+```
+
+You may need to set the `OPENSSL_ROOT_DIR` environment variable:
+
+```shell
 set OPENSSL_ROOT_DIR="C:\Program Files\OpenSSL-Win64"
 ```
 

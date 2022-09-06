@@ -50,11 +50,6 @@ yarn install @iota/wallet dotenv
 
 ## Use the Library
 
-You can find more information on using the `wallet.rs` library's node.js binding in
-the [how tos section](../libraries/nodejs/how_to/0_create_account.mdx).
-
-## Use the Library
-
 After you have [installed the library](#install-the-library), you can create
 a [`AccountManager`](./../libraries/nodejs/references/classes/AccountManager.md)
 instance and interface with it.
