@@ -1,5 +1,5 @@
 ---
-description: 'The `wallet.rs` library is written in Rust. You can also find three bindings written in Node.js and
+description: 'The `wallet.rs` library is written in Rust. You can also find bindings written in Node.js and
 Python'
 image: /img/logo/wallet_light.png
 keywords:

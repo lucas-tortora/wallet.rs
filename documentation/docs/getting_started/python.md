@@ -1,5 +1,5 @@
 ---
-description: Getting started with the official IOTA Wallet Library Python binding.
+description: 'Get started with the official IOTA Wallet Library Python binding.'
 image: /img/logo/iota_mark_light.png
 keywords:
 

@@ -1,5 +1,5 @@
 ---
-description: Getting started with the official IOTA Wallet Library Software Rust library.
+description: 'Get started with the official IOTA Wallet Library Software Rust library.'
 image: /img/logo/wallet_light.png
 keywords:
 

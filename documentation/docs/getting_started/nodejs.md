@@ -1,5 +1,5 @@
 ---
-description: Getting started with the official IOTA Wallet Library Software Node.js binding.
+description: 'Get started with the official IOTA Wallet Library Software Node.js binding.'
 image: /img/logo/wallet_light.png
 keywords:
 
