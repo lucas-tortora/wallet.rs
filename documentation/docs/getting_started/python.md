@@ -20,7 +20,7 @@ import SafePasswordStorage from '../_admonitions/_warning_safe_password_storage.
 * [Python 3.x](https://www.python.org)
 * [pip](https://pypi.org/project/pip) >= 19.1
 * [setuptools-rust](https://pypi.org/project/setuptools-rust/) >= 0.10.2
-* [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) to compile the binding
+* [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) to compile the binding.
 
 ## Install the Library
 

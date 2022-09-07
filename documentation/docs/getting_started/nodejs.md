@@ -22,8 +22,9 @@ on [npmjs.com](https://www.npmjs.com/).
 
 ## Prerequisites
 
-One of:
+* [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) to compile the binding.
 
+One of:
 * [npm](https://www.npmjs.com/)
 * [Yarn](https://yarnpkg.com/)
 
@@ -55,7 +56,7 @@ a [`AccountManager`](./../libraries/nodejs/references/classes/AccountManager.md)
 instance and interface with it.
 
 ```javascript
-   const accountManagerOptions = {
+const accountManagerOptions = {
     storagePath: './alice-database',
     clientOptions: {
         nodes: ['https://api.testnet.shimmer.network'],

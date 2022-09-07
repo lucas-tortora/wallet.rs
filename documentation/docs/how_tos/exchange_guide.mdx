@@ -10,39 +10,21 @@ keywords:
 - NodeJS
 - explanation
 ---
-
 import CodeBlock from '@theme/CodeBlock';
-import generate_mnemonic from  '!!raw-loader!./../../../../bindings/nodejs/examples/exchange/0-generate-mnemonic.js';
-import create_account from  '!!raw-loader!./../../../../bindings/nodejs/examples/exchange/1-create-account.js';
-import generate_address from  '!!raw-loader!./../../../../bindings/nodejs/examples/exchange/2-generate-address.js';
-import check_balance from  '!!raw-loader!./../../../../bindings/nodejs/examples/exchange/3-check-balance.js';
-import listen_events from  '!!raw-loader!./../../../../bindings/nodejs/examples/exchange/4-listen-events.js';
-import send_amount from  '!!raw-loader!./../../../../bindings/nodejs/examples/exchange/5-send-amount.js';
+import generate_mnemonic from  '!!raw-loader!./../../../bindings/nodejs/examples/exchange/0-generate-mnemonic.js';
+import create_account from  '!!raw-loader!./../../../bindings/nodejs/examples/exchange/1-create-account.js';
+import generate_address from  '!!raw-loader!./../../../bindings/nodejs/examples/exchange/2-generate-address.js';
+import check_balance from  '!!raw-loader!./../../../bindings/nodejs/examples/exchange/3-check-balance.js';
+import listen_events from  '!!raw-loader!./../../../bindings/nodejs/examples/exchange/4-listen-events.js';
+import send_amount from  '!!raw-loader!./../../../bindings/nodejs/examples/exchange/5-send-amount.js';
 
 # Stardust Exchange Integration Guide
-
 
 :::note
 
 You can easily integrate wallet.rs with your exchange, custody solution, or product.
 
 :::
-
-## Account Approaches
-
-In [wallet.rs](../../welcome.md), you can use an account model to [create an account for each user](#multi-account-approach) or [use one account and generate multiple addresses](#single-account-approach), which you can then link to the users in your database. The wallet library is as flexible as possible and can back up any of your use cases.
-
-The library supports derivation for multiple accounts from a single seed. An account is simply a deterministic identifier from which multiple addresses can be further derived. 
-
-The library also allows consumers to assign a meaningful alias to each account. Since addresses are reusable, they can be mapped to your users in a clear and concise way.
-
-### Multi-Account Approach
-
-You should use the multi-account approach if you want to create an account for each individual user. You can link the accounts to the internal user IDs as an account alias, which are distinctly separated.
-
-### Single Account Approach
-
-You should use the single account approach if you want to create a single account and then create an address for each user. You will need to link the associated addresses to the internal user IDs and store who owns which address in a database. Most exchanges are familiar with the single account approach and find it easier to use, implement, and backup.
 
 ## Implementation Guide
 
@@ -61,7 +43,7 @@ The Wallet Library is a stateful package with a standardized interface for devel
 
 :::note
 
-If you are not familiar with the wallet.rs library, you can find more information in the [documentation](../../welcome.md).
+If you are not familiar with the wallet.rs library, you can find more information in the [documentation](../welcome.md).
 
 :::
 
@@ -76,7 +58,7 @@ You can use the following examples as a guide to implementing *the multi-account
 
 :::note
 
-If you are looking for other languages, please read the [wallet.rs library overview](https://wiki.iota.org/wallet.rs/develop/overview).
+If you are looking for other languages, please read the [wallet.rs library overview](./../explanations/library_overview.md).
 
 :::
 
@@ -84,9 +66,9 @@ Since all `wallet.rs` bindings are based on core principles provided by the `wal
 
 ### 1. Set Up the Wallet.rs Library
 
-First, you should install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the [NodeJs binding](./getting_started.md), it is straightforward since it is distributed via the `npm` package manager.
+First, you should install the components that are needed to use `wallet.rs` and the binding of your choice; it may vary a bit from language to language. In the case of the [NodeJs binding](./../getting_started.md), it is straightforward since it is distributed via the `npm` package manager.
 
-You can read more about [backup and security in this guide](https://wiki.iota.org/introduction/guides/backup_security).
+You can read more about [backup and security in this guide](https://wiki.iota.org/introduction/develop/how_tos/backup_security).
 
 ```bash
 npm install @iota/wallet dotenv
@@ -111,7 +93,7 @@ SH_PASSWORD="here is your super secure password"
 MNEMONIC="here is your super secure 24 word mnemonic, it's only needed here the first time"
 ```
 
-After you have updated the `.env` file, you can initialize the `AccountManager` instance with a secret manager([`Stronghold`](https://wiki.iota.org/stronghold.rs/getting_started) by default) and client options.
+After you have updated the `.env` file, you can initialize the `AccountManager` instance with a secret manager([`Stronghold`](https://wiki.iota.org/stronghold.rs/welcome) by default) and client options.
 
 :::note
 
