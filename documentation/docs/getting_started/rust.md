@@ -1,51 +1,71 @@
 ---
-description: Getting started with the official IOTA Wallet Library Software Rust library.
+description: 'Get started with the official IOTA Wallet Library Software Rust library.'
 image: /img/logo/wallet_light.png
 keywords:
+
 - Rust
 - install
 - cargo
 - system environment variables
+
 ---
+import SafePasswordStorage from '../_admonitions/_warning_safe_password_storage.md'
+
 # Getting Started with Rust
+
+<SafePasswordStorage/>
 
 ## Prerequisites
 
- _Rust_ and _Cargo_ are required to use wallet.rs. You can find installation instructions in the [Rust documentation](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+* [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html).
 
-We recommend you update _Rust_ to the latest stable version [rustup update stable](https://github.com/rust-lang/rustup.rs#keeping-rust-up-to-date). The nightly version should be fine, but there is a chance some changes are not compatible.
+We recommend you update _Rust_ to the latest stable
+version [rustup update stable](https://github.com/rust-lang/rustup.rs#keeping-rust-up-to-date).
 
-### Dependencies
+## Dependencies
 
- [_cmake_](https://cmake.org/documentation/) and [_openssl_](https://www.openssl.org/docs/) are required. In order to run the build process successfully using Cargo you may need install additional build tools on your system. 
+The library uses [_cmake_](https://cmake.org/documentation/) and [_openssl_](https://www.openssl.org/docs/). You may
+need install additional build tools on your system to run the build process successfully using Cargo.
 
 ### Windows
 
- _cmake_ can be downloaded from the [official cmake website](https://cmake.org/download/).
- _openssl_ can be installed with [vcpkg](https://github.com/microsoft/vcpkg) or [chocolatey](https://chocolatey.org/).
+You can download _cmake_ from the [official cmake website](https://cmake.org/download/).
+You can install _openssl_ with [vcpkg](https://github.com/microsoft/vcpkg) or [chocolatey](https://chocolatey.org/).
 
-- Installing _openssl_ with _vcpkg_ :
+#### Install _openssl_ with _vcpkg_
 
-    ```
-    ./vcpkg.exe install openssl:x64-windows
-    ./vcpkg.exe integrate install
-    # you may want to add this to the system environment variables since you'll need it to compile the crate
-    set VCPKGRS_DYNAMIC=1
-    ```
+You can run the following command to install _openssl_ with _vcpkg_:
 
-- Installing _openssl_ with _chocolatey_ :
+```shell
+./vcpkg.exe install openssl:x64-windows
+./vcpkg.exe integrate install
+```
 
-    ```
-    choco install openssl
-    # you may need to set the OPENSSL_ROOT_DIR environment variable
-    set OPENSSL_ROOT_DIR="C:\Program Files\OpenSSL-Win64"
-    ```
+You may want to add this to the system environment variables since you'll need it to compile the crate:
+
+```shell
+set VCPKGRS_DYNAMIC=1
+```
+
+#### Install _openssl_ with _chocolatey_
+
+You can run the following command to install _openssl_ with _chocolatey_:
+
+```shell
+choco install openssl
+```
+
+You may need to set the `OPENSSL_ROOT_DIR` environment variable:
+
+```shell
+set OPENSSL_ROOT_DIR="C:\Program Files\OpenSSL-Win64"
+```
 
 ### macOS
 
- _cmake_ and _openssl_ can be installed with [_Homebrew_](https://docs.brew.sh/) by running the following commands:
+You can install _cmake_ and _openssl_ with [_Homebrew_](https://docs.brew.sh/) by running the following commands:
 
-```
+```bash
 brew install cmake
 brew install openssl@1.1
 # you may want to add this to your .zshrc or .bashrc since you'll need it to compile the crate
@@ -54,20 +74,21 @@ OPENSSL_ROOT_DIR=$(brew --prefix openssl@1.1)
 
 ### Linux
 
-You can install _cmake_ and _openssl_ with your distro's package manager or download from their websites. On Debian and Ubuntu you will also need the [_build-essential_](https://packages.debian.org/sid/build-essential) package.
+You can install _cmake_ and _openssl_ with your distro's package manager or download from their websites. On Debian and
+Ubuntu you will also need the [_build-essential_](https://packages.debian.org/sid/build-essential) package.
 
-## Usage
+## Include the Library in Your `Cargo.toml`
 
-To use the library, add this to your _Cargo.toml_ :
+The only thing you need to do to start using the library is to add it as dependency in your `Cargo.toml` file:
 
 ```
 [dependencies]
 iota-wallet = { git = "https://github.com/iotaledger/wallet.rs", branch = "develop" }
 ```
 
-### Initialisation
+## Use the Library
 
-In order to use the library, you first need to create an _AccountManager_ :
+In order to use the library, you need to create an _AccountManager_:
 
 ```rust
 use std::path::PathBuf;
@@ -123,3 +144,9 @@ async fn main() -> Result<()> {
     Ok(())
 }
 ```
+
+## What's Next?
+
+Now that you are up and running, you can get acquainted with the library using
+its [how-to guides](../how_tos/00_run_how_tos.mdx) and the
+repository's [code examples](https://github.com/iotaledger/wallet.rs/tree/develop/examples).
