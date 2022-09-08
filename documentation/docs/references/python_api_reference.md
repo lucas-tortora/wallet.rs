@@ -466,30 +466,6 @@ def __init__(snapshot_path, password)
 
 Initialize a stronghold secret manager.
 
-<a id="iota_wallet.common"></a>
-
-# iota\_wallet.common
-
-<a id="iota_wallet.common.send_message_routine"></a>
-
-#### send\_message\_routine
-
-```python
-def send_message_routine(func)
-```
-
-The routine of dump json string and call send_message()
-
-<a id="iota_wallet.common.IotaWalletError"></a>
-
-## IotaWalletError Objects
-
-```python
-class IotaWalletError(Exception)
-```
-
-iota-wallet error
-
 <a id="iota_wallet.wallet"></a>
 
 # iota\_wallet.wallet
@@ -727,4 +703,28 @@ def stop_background_sync()
 ```
 
 Stop background syncing.
+
+<a id="iota_wallet.common"></a>
+
+# iota\_wallet.common
+
+<a id="iota_wallet.common.send_message_routine"></a>
+
+#### send\_message\_routine
+
+```python
+def send_message_routine(func)
+```
+
+The routine of dump json string and call send_message()
+
+<a id="iota_wallet.common.IotaWalletError"></a>
+
+## IotaWalletError Objects
+
+```python
+class IotaWalletError(Exception)
+```
+
+iota-wallet error
 
