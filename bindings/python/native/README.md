@@ -66,4 +66,4 @@ print(account)
 ```
 
 ## Build docs
-`pydoc-markdown -p iota_wallet > ../../../documentation/docs/libraries/python/api_reference.md`
+`pydoc-markdown -p iota_wallet > ../../../documentation/docs/references/python_api_reference.md`
