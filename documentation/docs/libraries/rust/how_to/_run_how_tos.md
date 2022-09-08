@@ -40,7 +40,7 @@ cargo run --example 0_generate_addresses --release
 
 ## Examples List
 
-You can replace the `0_generate_addresses` by any other example from the [Rust examples directory](https://github.com/iotaledger/wallet.rs/tree/dev/examples).
+You can replace the `0_generate_addresses` by any other example from the [Rust examples directory](https://github.com/iotaledger/wallet.rs/tree/develop/examples).
 
 You can get a full list of examples by running the following command:
 

@@ -52,7 +52,7 @@ yarn install @iota/wallet dotenv
 ## Use the Library
 
 After you have [installed the library](#install-the-library), you can create
-a [`AccountManager`](./../libraries/nodejs/references/classes/AccountManager.md)
+a [`AccountManager`](./../references/nodejs/classes/AccountManager.md)
 instance and interface with it.
 
 ```javascript
