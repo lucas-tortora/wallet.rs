@@ -77,5 +77,5 @@ const manager = new AccountManager(accountManagerOptions);
 ## What's Next?
 
 Now that you are up and running, you can get acquainted with the library using
-its [how-to guides](../how_tos/00_run_how_tos.mdx) and the
+its [how-to guides](../how_tos/run_how_tos.mdx) and the
 repository's [code examples](https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs/examples).

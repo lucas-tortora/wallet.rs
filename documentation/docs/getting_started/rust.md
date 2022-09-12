@@ -119,7 +119,7 @@ async fn main() -> Result<()> {
         .store_mnemonic(nonsecure_use_of_development_mnemonic)
         .await?;
 
-    // Create the account manager with the secret_manager and client options
+    // Create the accounts_and_addresses manager with the secret_manager and client options
     let client_options = ClientOptions::new().with_node("http://localhost:14265")?;
 
     let manager = AccountManager::builder()
@@ -129,7 +129,7 @@ async fn main() -> Result<()> {
         .finish()
         .await?;
 
-    // Create a new account, this will automatically generate an address
+    // Create a new accounts_and_addresses, this will automatically generate an address
     let account = manager
         .create_account()
         .with_alias("Alice".to_string())
@@ -137,7 +137,7 @@ async fn main() -> Result<()> {
         .await?;
 
     println!(
-        "Generated a new account with addresses {:?}",
+        "Generated a new accounts_and_addresses with addresses {:?}",
         account.list_addresses().await?
     );
 
@@ -148,5 +148,5 @@ async fn main() -> Result<()> {
 ## What's Next?
 
 Now that you are up and running, you can get acquainted with the library using
-its [how-to guides](../how_tos/00_run_how_tos.mdx) and the
+its [how-to guides](../how_tos/run_how_tos.mdx) and the
 repository's [code examples](https://github.com/iotaledger/wallet.rs/tree/develop/examples).
