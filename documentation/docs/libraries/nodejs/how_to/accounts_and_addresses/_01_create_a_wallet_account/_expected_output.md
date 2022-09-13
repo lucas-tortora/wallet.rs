@@ -1,4 +1,4 @@
-```json
+```js
 Account created: Account {
   meta: {
     index: 0,

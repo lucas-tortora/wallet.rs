@@ -1,5 +1,6 @@
 ---
 title: Mint NFTs
+sidebar_label: Mint
 description: ''
 image: /img/logo/iota_mark_light.png
 keywords:
@@ -17,9 +18,23 @@ import PythonCode from "../../_admonitions/_guide_coming_soon.md";
 import PythonOutput from "../../_admonitions/_guide_coming_soon.md";
 import RustCode from "../../libraries/rust/how_to/NFT/_01_mint_nft/_code_sample.mdx";
 import RustOutput from "../../libraries/rust/how_to/NFT/_01_mint_nft/_expected_output.md";
+import TipFaucet from "../../_admonitions/_tip_faucet.md";
 
+<TipFaucet/>
+
+You can use a node running the stardust update to mint
+[non-fungible tokens (NFTs)](https://wiki.iota.org/introduction/develop/explanations/what_is_stardust/tokenization#non-fungible-tokens-nfts).
+To do so, you will only need to [add some funds to your account](../accounts_and_addresses/03_request_funds.mdx), define
+the native token's options and call the `Account.mint_nfts(nft_options, options)` function.
 
 ## Code Example
+
+The following example will:
+
+1. Create an account manager.
+2. Get Alice's which was [created in the first guide](../accounts_and_addresses/01_create_a_wallet_account.mdx).
+3. Create the `NftOptions`.
+4. Mint the NFT by calling the `Account.mint_nfts(nft_options, options)` function.
 
 <Tabs groupId="language">
     <TabItem value="rust" label="Rust">

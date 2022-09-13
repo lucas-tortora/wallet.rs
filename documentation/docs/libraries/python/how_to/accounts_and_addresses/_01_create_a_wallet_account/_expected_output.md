@@ -1,4 +1,4 @@
-```json
+```js
 {
   'index': 0,
   'coinType': 4219,

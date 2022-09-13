@@ -1,4 +1,4 @@
-```json
+```js
 AccountBalance{
   base_coin: BaseCoinBalance{
     total: 100000000000,

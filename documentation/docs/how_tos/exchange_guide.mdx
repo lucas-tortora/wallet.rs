@@ -1,5 +1,6 @@
 ---
 description: Easily integrate with your exchange, custody solution, or product using the wallet.rs library.
+sidebar_label: Integrate wallet.rs With Your Exchange
 keywords:
 - integrate
 - exchange
@@ -187,7 +188,7 @@ You can use the following example to listen to new output events:
 
 **Example output:**
 
-```json
+```js
 NewOutput: {
   output: {
     outputId: '0x2df0120a5e0ff2b941ec72dff3464a5b2c3ad8a0c96fe4c87243e4425b9a3fe30000',
@@ -222,7 +223,7 @@ Default options are fine and successful; however, you can provide additional opt
 * `reuseAddress`: Send the remainder value back to its original address.
 * `customAddress`: Send the remainder value back to a provided account address.
 
-```json
+```js
 TransactionOptions {
     remainderValueStrategy?: RemainderValueStrategy;
     taggedDataPayload?: ITaggedDataPayload;

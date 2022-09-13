@@ -1,4 +1,4 @@
-```json
+```js
 {
   payload: {
     type: 6,

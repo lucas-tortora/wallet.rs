@@ -27,6 +27,8 @@ cd wallet.rs
 cp .env.example .env
 ```
 
+You should update the `NODE_URL` and `FAUCET_URL` values to match the [Hornet node](#hornet-node) you want to use.
+
 ## Run Code Examples
 
 The wallet.rs library has numerous [examples](https://github.com/iotaledger/wallet.rs/tree/develop/examples)
