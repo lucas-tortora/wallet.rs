@@ -3,15 +3,20 @@
 Before you can run the examples, please refer to the [Node.js Getting Started guide](./../getting_started/nodejs) to install
 the library.
 
-## Set Up Your `.env` File
+### Set Up Your .env file
 
-The examples use variables from a `.env` file. Though you can create your own, for the examples you can simply copy the
-existing [`.env.example`](https://github.com/iotaledger/wallet.rs/blob/develop/bindings/nodejs/.env.example) file. You can
-do this running the following command from the `bindings/nodejs` directory:
+The code examples use a `.env` file to store variables. You can download
+the [example file](https://github.com/iotaledger/wallet.rs/blob/develop/wallet/.env.example) or create a new one with
+the following variables:
 
-```bash
-cp .env.example .env
+```dotenv
+NON_SECURE_USE_OF_DEVELOPMENT_MNEMONIC="endorse answer radar about source reunion marriage tag sausage weekend frost daring base attack because joke dream slender leisure group reason prepare broken river"
+STRONGHOLD_PASSWORD="some_hopefully_secure_password"
+NODE_URL="http://localhost:14265"
+FAUCET_URL="http://localhost:8091/api/enqueue"
 ```
+
+You should update the `NODE_URL` and `FAUCET_URL` values to match the [Hornet node](#hornet-node) you want to use.
 
 ## Install Dependencies
 
@@ -36,7 +41,7 @@ npm run build
 The wallet.rs library has numerous examples you can run to get acquainted with the library.
 After you have followed the instructions to [build the library](#build-the-library), you can run any Node.js example.
 You will need to select any of the
-[Node.js examples](https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs/examples) and run it with
+[Node.js examples](https://github.com/iotaledger/wallet.rs/tree/develop/wallet/bindings/nodejs/examples/) and run it with
 your local Node.js interpreter.
 
 To run examples, you will need to change to the `bindings/nodejs/examples` directory, and run any example.
